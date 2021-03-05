@@ -31,3 +31,14 @@ chile
 
 ```
 
+## Resumen de especies por país 
+
+```{r}
+library(dplyr)
+Resumen <- plants %>% 
+  dplyr::filter (continent == "South America") %>%
+  group_by(country) %>% 
+  summarise(n_species = n())
+Resumen 
+```
+

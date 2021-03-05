@@ -48,3 +48,50 @@ chile
     ##   <chr>                   <chr>  
     ## 1 Santalum fernandezianum Chile  
     ## 2 Sophora toromiro        Chile
+
+## Resumen de especies por país
+
+``` r
+library(dplyr)
+```
+
+    ## 
+    ## Attaching package: 'dplyr'
+
+    ## The following objects are masked from 'package:dbplyr':
+    ## 
+    ##     ident, sql
+
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+
+``` r
+Resumen <- plants %>% 
+  dplyr::filter (continent == "South America") %>%
+  group_by(country) %>% 
+  summarise(n_species = n())
+```
+
+    ## `summarise()` ungrouping output (override with `.groups` argument)
+
+``` r
+Resumen 
+```
+
+    ## # A tibble: 9 x 2
+    ##   country             n_species
+    ##   <chr>                   <int>
+    ## 1 Argentina                   1
+    ## 2 Bolivia                     1
+    ## 3 Brazil                     10
+    ## 4 Chile                       2
+    ## 5 Colombia                    6
+    ## 6 Ecuador                    52
+    ## 7 Peru                        4
+    ## 8 Trinidad and Tobago         6
+    ## 9 Venezuela                   1
