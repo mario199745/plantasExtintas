@@ -13,3 +13,9 @@ En este documento trabajaremos para explorar la identidad de plantas que se encu
 
 ## Subtítulo 
 
+```{r}
+library(readr)
+plants <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-08-18/plants.csv")
+```
+
+
