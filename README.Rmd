@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introducción 
 
-En este documento trabajaremos para explorar la identidad de plantas que se encuentran extintas en silvestría o totalmente según la [*IUCN*] ( [link](https://www.iucnredlist.org/)). 
+En este documento trabajaremos para explorar la identidad de plantas que se encuentran extintas en silvestría o totalmente según la [*IUCN*]( https://www.iucnredlist.org/). 
 
 ## Subtítulo 
 
